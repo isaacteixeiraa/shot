@@ -15,7 +15,7 @@
     <body>
         <div>
             <div id="numescolhido">
-                <img src="images/numeio.png" id="numero">
+                <p name="imagemNumero"><img src="images/numeio.png" id="numero"></p>
             </div>
 
             <div id="palpite">
