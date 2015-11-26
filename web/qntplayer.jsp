@@ -32,7 +32,7 @@
             </div>
 
             <div>
-                <button name="play" id="iniciar" href="qntplayer.jsp">Iniciar</button>
+                <button name="play" id="iniciar">Iniciar</button>
                 <!--<a href="palpite.jsp"><button name="play" id="iniciar" href="qntplayer.jsp">Iniciar</button></a>-->
             </div>
         </form>

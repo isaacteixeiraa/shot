@@ -5,6 +5,7 @@
  */
 package controller;
 
+import fabrica.Fabrica;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,20 +32,20 @@ public class ServletInicial extends HttpServlet {
      */
     protected void criarJogadores(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String jogadores = request.getParameter("campojogadores");
-        
-        try{
+
+        try {
             int numJogadores = Integer.parseInt(jogadores);
             new player.Jogadores().setNumJogadores(numJogadores);
-            
+
             RequestDispatcher rd = request.getRequestDispatcher("/palpite.jsp");
             rd.forward(request, response);
-        }catch(Exception ex){
+        } catch (Exception ex) {
             RequestDispatcher rd = request.getRequestDispatcher("/qntplayer.jsp");
             rd.forward(request, response);
         }
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

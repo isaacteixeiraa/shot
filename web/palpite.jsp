@@ -10,24 +10,53 @@
     <head>
         <title>Shot - Drink&Fun</title>
         <link rel="stylesheet" href="jogo.css"/>
+
+        <script>
+            var random;
+
+            window.onload = function iniciaPartida() {//ira executar ao abrir a pagina
+                random = Math.floor(Math.random() * 101);//gera numero randomico 0 ~ 100
+            };
+
+            function clickOk() {//quando clicar no botao
+                var palpite = document.getElementById("campopalpite").value;//recebe valor do input
+
+                if (palpite == random) {
+                    document.getElementById("label").innerHTML = "Parabéns, você venceu";
+                    alert("Parabéns, você venceu");
+                    window.location.href = "play.jsp";
+                } else if (palpite > random) {
+
+                    document.getElementById("maior").innerHTML = palpite;
+
+                } else if (palpite < random) {
+
+                    document.getElementById("menor").innerHTML = palpite;
+
+                }
+
+                document.getElementById("campopalpite").value = "";//altera valor do input
+            }
+        </script>
+
     </head>
 
     <body>
         <div>
             <div id="numescolhido">
-                <p name="imagemNumero"><img src="images/numeio.png" id="numero"></p>
+                <p id="palpiteNumero"><img src="images/numeio.png" id="numero"></p>
             </div>
 
             <div id="palpite">
-                <p>Palpite Jogador Nº:</p>
-                <form  method="post" action="<%= request.getContextPath()%>/Servlet">
-                    <input name="palpite" id="campopalpite"/>
-                    <button name="OK" id="ok">OK</button>
-                </form>
+                <p id="label">Palpite Jogador Nº:</p>
+                <!--<form  method="post" action="<%= request.getContextPath()%>/Servlet">-->
+                <input name="palpite" id="campopalpite"/>
+                <button name="OK" id="ok" onclick="clickOk()">OK</button>
+                <!--</form>-->
             </div>
             <div id="intervalo">
-                <div id="menor">Menor</div>
-                <div id="maior">Maior</div>
+                <div id="menor">0</div>
+                <div id="maior">100</div>
             </div>
         </div>
     </body>

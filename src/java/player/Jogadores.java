@@ -11,7 +11,7 @@ package player;
  */
 public class Jogadores {
 
-    private int numJogadores;
+    private static int numJogadores;
 
     public int getNumJogadores() {
         return numJogadores;

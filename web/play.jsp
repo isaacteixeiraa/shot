@@ -19,8 +19,8 @@
                 <img src="images/LogoShine.png" id="imagemplay"/>
             </div>
             <div>
-                <a href="qntplayer.jsp"><button name="play" id="play" href="qntplayer.jsp">Play</button></a>
+                <a href="qntplayer.jsp"><button name="play" id="play">Play</button></a>
             </div>
-
+        </div>
     </body>
 </html>
