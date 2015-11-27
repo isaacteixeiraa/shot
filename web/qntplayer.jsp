@@ -13,21 +13,20 @@
     </head>
     <body>
         <form method="post" action="<%= request.getContextPath()%>/ServletInicial">
-            <div>
+            <div class="centrops">
                 <div id="esquerda">
                     <a href="play.jsp"><img src="images/LogoShine.png" id="imagemjogadores"/></a>
                 </div>
 
                 <div id="direita">
-
-                    <div id="numjogadores">
-                        <p>Numero de Jogadores:</p>
-                    </div>
-
-                    <div>
-                        <input name="campojogadores" id="campojogadores"/>
-                    </div>
-
+                    <div class="alinhamento">
+                        <div id="numjogadores">
+                            <p>Numero de Jogadores:</p>
+                        </div>
+                        <div>
+                            <input name="campojogadores" id="campojogadores"/>
+                        </div>
+                    </div> 
                 </div>
             </div>
 

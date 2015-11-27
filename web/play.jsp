@@ -13,14 +13,11 @@
     </head>
 
     <body>
-
-        <div>
-            <div>
-                <img src="images/LogoShine.png" id="imagemplay"/>
-            </div>
-            <div>
-                <a href="qntplayer.jsp"><button name="play" id="play">Play</button></a>
-            </div>
+        <div class="inicontent">
+            <img src="images/LogoShine.png" id="imagemplay"/>
+        </div>
+        <div class="botão">
+            <a href="qntplayer.jsp"><button name="play" id="play">Play</button></a>
         </div>
     </body>
 </html>
