@@ -4,8 +4,10 @@
     Author     : Isaac Teixeira
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page session="true" %>
+
 <html lang="pt-BR">
     <head>
         <title>Shot - Drink&Fun</title>
@@ -48,15 +50,17 @@
             </div>
 
             <div id="palpite">
-                <p id="label">Palpite Jogador Nº:</p>
-                <!--<form  method="post" action="<%= request.getContextPath()%>/Servlet">-->
-                <input name="palpite" id="campopalpite"/>
+                <p id="label" class="fontwb">Palpite Jogador <%= request.getSession().getAttribute("jogador1")%></p>
+                <!--<form  method="post" action="/Servlet">-->
+                <input name="palpite" class="campop" id="campopalpite"/>
                 <button name="OK" id="ok" onclick="clickOk()">OK</button>
                 <!--</form>-->
             </div>
             <div id="intervalo">
-                <div id="menor">0</div>
-                <div id="maior">100</div>
+                <div class="meia" >
+                    <div id="menor" class="esq fontwb">0</div></div>
+                <div class="meia">
+                    <div id="maior" class="dir fontwb">100</div></div>
             </div>
         </div>
     </body>

@@ -5,19 +5,30 @@
  */
 package player;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Isaac Teixeira
  */
 public class Jogadores {
 
-    private static int numJogadores;
+    public static ArrayList<jogador> jgdr = new ArrayList<jogador>();
+    public static int cont = 0;
 
-    public int getNumJogadores() {
-        return numJogadores;
+    public static void addjog(String nome) {
+        jogador j = new jogador(nome);
+        jgdr.add(j);
+        cont++;
     }
 
-    public void setNumJogadores(int numJogadores) {
-        this.numJogadores = numJogadores;
+    public static String getNomeJogador(int id) {
+
+        return jgdr.get(id).getNome();
     }
+
+    public static int getCont() {
+        return cont;
+    }
+
 }
